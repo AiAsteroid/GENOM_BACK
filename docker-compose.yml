@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  frontend:
+    build: .
+    container_name: frontend-app
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+    environment:
+      - NODE_ENV=${NODE_ENV:-production}
+      - PORT=${PORT:-3000}
+    restart: unless-stopped
