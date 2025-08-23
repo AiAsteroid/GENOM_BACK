@@ -4,7 +4,7 @@
     "module": "commonjs",
     "lib": ["ES2020"],
     "outDir": "./dist",
-    "rootDir": "./src",
+    "rootDir": ".",        // <- ключевое изменение
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -31,13 +31,6 @@
       "@/routes/*": ["src/routes/*"]
     }
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "**/*.test.ts",
-    "**/*.spec.ts"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
 }
