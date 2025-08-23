@@ -56,8 +56,8 @@ app.get("/health", (req, res) => {
 });
 
 // API routes
-app.use("/api/voices", voiceRoutes);
-app.use("/api/auth", authRoutes);
+app.use("/cartesia/voices", voiceRoutes);
+app.use("/cartesia/auth", authRoutes);
 
 // 404 handler
 app.use(notFound);
