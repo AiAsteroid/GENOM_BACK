@@ -23,7 +23,7 @@ jobs:
           envs: PORT,NODE_ENV
           script: |
             set -e
-            cd /opt/back/GENOM
+            cd /opt/back/GENOM_BACK
             echo ">>> Fetching latest code"
             git fetch --all
             git reset --hard origin/main
