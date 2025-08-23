@@ -12,6 +12,7 @@ if (process.env.NODE_ENV !== "test") {
     console.log(`🚀 Voice API server is running on port ${port}`);
     console.log(`📖 Health check: http://localhost:${port}/health`);
     console.log(`🎤 Voices API: http://localhost:${port}/api/voices`);
+    console.log(`🎤 Swagger API: http://localhost:${port}/api-docs`);
   });
 
   server.on("error", (err) => {

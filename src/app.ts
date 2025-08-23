@@ -8,6 +8,9 @@ import express from "express";
 import rateLimit from "express-rate-limit";
 import helmet from "helmet";
 import morgan from "morgan";
+import swaggerUi from "swagger-ui-express";
+
+import swaggerSpec from "swagger";
 
 import authRoutes from "./api/auth-cartesia.js";
 import voiceRoutes from "./api/voice.js";
@@ -55,6 +58,8 @@ app.get("/health", (req, res) => {
   });
 });
 
+// Swagger
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // API routes
 app.use("/cartesia/voices", voiceRoutes);
 app.use("/cartesia/auth", authRoutes);
