@@ -10,8 +10,7 @@ import helmet from "helmet";
 import morgan from "morgan";
 import swaggerUi from "swagger-ui-express";
 
-import swaggerSpec from "swagger";
-
+import swaggerSpec from "../swagger.js";
 import authRoutes from "./api/auth-cartesia.js";
 import voiceRoutes from "./api/voice.js";
 import { errorHandler, notFound } from "./middlewares.js";

@@ -12,7 +12,10 @@ export default antfu({
 }, {
   rules: {
     "ts/no-redeclare": "off",
-    "node/file-extension-in-import": ["error", "always"],
+    "node/file-extension-in-import": ["error", "always", {
+      js: "never",
+      ts: "never",
+    }],
     "ts/consistent-type-definitions": ["error", "type"],
     "no-console": "off",
     "antfu/no-top-level-await": ["off"],
