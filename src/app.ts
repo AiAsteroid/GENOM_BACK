@@ -12,6 +12,7 @@ import swaggerUi from "swagger-ui-express";
 
 import swaggerSpec from "../swagger.js";
 import authRoutes from "./api/auth-cartesia.js";
+import ttsRoutes from "./api/tts.js";
 import voiceRoutes from "./api/voice.js";
 import { errorHandler, notFound } from "./middlewares.js";
 
@@ -62,6 +63,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // API routes
 app.use("/cartesia/voices", voiceRoutes);
 app.use("/cartesia/auth", authRoutes);
+app.use("/cartesia/tts", ttsRoutes);
 
 // 404 handler
 app.use(notFound);
